@@ -61,3 +61,34 @@ app.use((err, req, res, next) => {
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
+const express = require('express');
+const userRoutes = require('./userRoutes'); // Adjust the path as per your project structure
+
+const app = express();
+
+// Other middleware and configurations...
+
+// Use userRoutes as middleware
+app.use('/api', userRoutes);
+
+// Start the server
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
+import express from 'express';
+import userRoutes from './userRoutes.js'; // Adjust the path as per your project structure
+
+const app = express();
+
+// Other middleware and configurations...
+
+// Use userRoutes as middleware
+app.use('/api', userRoutes);
+
+// Start the server
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
+
